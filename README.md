@@ -21,3 +21,11 @@ TableGenerator is a simple web application built with HTML, CSS (using Tailwind 
 2. **Generated Table**: View the multiplication table displayed below the input field.
 3. **Reset**: Click "Reset" to clear the table and input field.
 
+## Deploy on Vercel
+
+Click the button below to deploy this project on Vercel:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/vikramsamak/TableGenerator)
+
+
+
