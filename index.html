@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <title>Table Generator</title>
+    <style>
+      input[type="number"] {
+        -moz-appearance: textfield;
+        appearance: none;
+      }
+      input[type="number"]::-webkit-outer-spin-button,
+      input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body class="flex flex-col bg-black min-h-screen w-screen font-mono">
+    <header class="p-4 flex w-full justify-center items-center">
+      <p
+        class="text-white uppercase font-extrabold text-center tracking-wider text-4xl"
+      >
+        Table Generator
+      </p>
+    </header>
+    <main class="grow h-full w-full flex justify-center items-center p-4">
+      <div
+        class="flex flex-col border-2 rounded-lg shadow-md h-96 w-96 p-4 gap-2"
+      >
+        <form
+          onsubmit="return generateTable()"
+          onreset="return handleReset()"
+          class="flex flex-col gap-2 w-full p-2"
+        >
+          <input
+            type="number"
+            min="1"
+            pattern="^\d+$"
+            title="Input number"
+            id="inputNum"
+            name="inputNum"
+            required
+            placeholder="Enter any number"
+            class="bg-gray-500 w-full rounded-md text-white p-2 placeholder:text-white placeholder:uppercase text-center"
+          />
+          <div class="flex w-full gap-2">
+            <button
+              type="submit"
+              class="text-white p-2 rounded-sm bg-gray-500 w-full rounded-md uppercase"
+            >
+              Generate
+            </button>
+            <button
+              type="reset"
+              class="text-white p-2 rounded-sm bg-gray-500 w-full rounded-md uppercase"
+            >
+              Reset
+            </button>
+          </div>
+        </form>
+        <div class="grow w-full h-full p-2" id="tableContainer"></div>
+      </div>
+    </main>
+    <footer class="p-4 flex flex-col w-full justify-center items-center gap-2">
+      <p class="text-white text-xs tracking-wider uppercase">
+        Designed and developed by
+        <a href="https://github.com/vikramsamak" class="hover:underline"
+          >Vikram Samak</a
+        >
+      </p>
+      <p class="text-white text-xs tracking-wider uppercase">
+        Made with the help of
+      </p>
+      <div class="flex h-4 w-full gap-2 items-center justify-center">
+        <img src="html.svg" />
+        <img src="js.svg" />
+        <img src="tailwind.svg" />
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
